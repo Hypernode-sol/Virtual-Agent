@@ -1,0 +1,10 @@
+# Hypernode Docker Agent Requirements
+
+# WebSocket client
+websockets==12.0
+
+# Docker SDK for Python
+docker==7.0.0
+
+# Additional utilities
+requests==2.31.0

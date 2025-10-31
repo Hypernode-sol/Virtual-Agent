@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  hypernode-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hypernode-host
+    restart: unless-stopped
+
+    # Environment configuration
+    environment:
+      # REQUIRED: Get your token from https://hypernodesolana.org/app
+      HN_NODE_TOKEN: ${HN_NODE_TOKEN}
+
+      # Optional: Override defaults
+      HN_ENDPOINT: ${HN_ENDPOINT:-wss://nodes.hypernodesolana.org}
+      HN_HEARTBEAT_INTERVAL: ${HN_HEARTBEAT_INTERVAL:-10}
+      HN_JOB_TIMEOUT: ${HN_JOB_TIMEOUT:-300}
+      HN_MAX_LOG_SIZE: ${HN_MAX_LOG_SIZE:-10000}
+      HN_RECONNECT_DELAY: ${HN_RECONNECT_DELAY:-5}
+
+    # GPU support (requires nvidia-docker)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    # Mount Docker socket for Docker-in-Docker
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - hypernode-data:/app/data
+
+    # Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+    # Health check
+    healthcheck:
+      test: ["CMD", "python", "healthcheck.py"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+
+    # Security options
+    security_opt:
+      - no-new-privileges:true
+
+    # Network mode
+    network_mode: bridge
+
+volumes:
+  hypernode-data:
+    driver: local
+
+# Example .env file:
+# HN_NODE_TOKEN=your-token-here
+# HN_ENDPOINT=wss://nodes.hypernodesolana.org
