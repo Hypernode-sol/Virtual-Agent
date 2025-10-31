@@ -1,0 +1,12 @@
+## Pages
+- [About HYPERNODE - Our Vision, Mission & Values](/about): To become the largest decentralized network of compute on the planet — enabling AI, scientific and high-performance workloads at unprecedented scale.
+- [App - HYPERNODE](/): Interact with the HYPERNODE network. Connect your device, explore DeFi services, and more.
+- [Automation Engine - HYPERNODE](/automationengine): Turn your Hypernode machine into an intelligent agent. Run automations, publish agents, and monetize your compute power.
+- [Community - Join the HYPERNODE Network](/community): Connect with the HYPERNODE community on Twitter, GitHub, and Discord. Contribute to open-source projects and shape the future of distributed computing.
+- [Contact - Get in Touch with HYPERNODE](/contact): Contact the HYPERNODE team for partnerships, technical support, or press inquiries. Find answers to frequently asked questions.
+- [Developer Portal - HYPERNODE](/developers): Welcome to the HYPERNODE Developer Hub. Whether you’re deploying large-language models, running a compute node, or building applications on our platform — you’ll find what you need right here.
+- [HYPERNODE — Harnessing Global Computing Power](/home): HYPERNODE is a global, decentralized computing network that unlocks idle processing capacity across devices. An embedded AI-agent orchestrates tasks worldwide, while a transparent blockchain-based incentive layer ensures secure, auditable rewards.
+- [HYPERNODE Economy: Incentive, Reward & Grow](/economy): In the HYPERNODE economy, everyone contributes — and everyone benefits. Node-operators offer compute power, model-deployers bring AI workloads, and the network rewards participation via transparent, on-chain incentives.
+- [Launch App - HYPERNODE](/launchapp): Connect your wallet and manage your HYPERNODE assets.
+- [LLM Deployment - HYPERNODE](/llmdeploy): Deploy and manage Large Language Models (LLMs) on the HYPERNODE decentralized network for scalable and efficient inference.
+- [Network Dashboard - HYPERNODE](/networkdashboard): Real-time network statistics for HYPERNODE, including active nodes, geographic distribution, and performance metrics.
